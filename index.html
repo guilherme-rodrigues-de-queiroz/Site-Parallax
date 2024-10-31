@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <meta name="description" content="A Beautiful Parallax Website">
+    <meta name="theme-color" content="#2a2826">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2a2826">
+    <meta name="msapplication-navbutton-color" content="#2a2826">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+</head>
+
+<body>
+    <div id="preloader"></div>
+
+    <header>
+        <ul class="menu-options" id="menu-options">
+            <li class="button-x">
+                <button class="btn-close" id="btn-close">X</button>
+            </li>
+            <li>
+                <p>Social Networks</p>
+            </li>
+            <div class="line"></div>
+            <li class="opc">
+                <a href="https://www.youtube.com/@GuilhermeRodrigues-ew8yu" target="_blank" rel="noopener noreferrer">
+                    <span><img src="assets/img/youtube.svg" alt="youtube-icon"></span>
+                    Youtube
+                </a>
+            </li>
+            <li class="opc">
+                <a href="https://www.linkedin.com/in/guilherme-de-queiroz" target="_blank" rel="noopener noreferrer">
+                    <span><img src="assets/img/linkedin.svg" alt="linkedin-icon"></span>
+                    Linkedin
+                </a>
+            </li>
+            <li class="opc">
+                <a href="https://github.com/guilherme-rodrigues-de-queiroz" target="_blank" rel="noopener noreferrer">
+                    <span><img src="assets/img/github.svg" alt=""></span>
+                    Github
+                </a>
+            </li>
+        </ul>
+
+        <nav>
+            <ul>
+                <li>
+                    <div id="btn" class="btn">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li class="monte">
+                    MOUNT EVEREST
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="mailto:guilhermedequeiroz2014@gmail.com">
+                        <button type="button">
+                            Get in touch
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="vinheta"></div>
+        <img src="assets/img/fog_1.webp" alt="fog_1" class="parallax fog_1">
+        <img src="assets/img/montain_1.webp" alt="montain_1" class="parallax montain-1" data-speedx="0.013"
+            data-speedy="0.04" data-speedz="0.3" data-rotation="0.2" data-distance="900">
+        <img src="assets/img/montain_3.webp" alt="montain_3" class="parallax montain-3" data-speedx="0.02"
+            data-speedy="0.01" data-speedz="0.3" data-rotation="0.4" data-distance="100">
+        <img src="assets/img/montain_2.webp" alt="montain_2" class="parallax montain-2">
+        <img src="assets/img/women.webp" alt="women" class="parallax women" data-speedx="0.003" data-speedy="0.03"
+            data-speedz="0.3" data-rotation="0" data-distance="850">
+        <div class="localizacao">
+            <svg width="22" height="22">
+                <g transform="translate(1 1)" stroke="#FFF" stroke-width="1.5" fill="none" fill-rule="evenodd">
+                    <path d="M14.2 5.8l-2.1 6.3-6.3 2.1 2.1-6.3z"></path>
+                    <circle cx="10" cy="10" r="10"></circle>
+                </g>
+            </svg>
+            <span>27.9881° N, 86.9250° E</span>
+        </div>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/preloader.js"></script>
+</body>
+
+</html>

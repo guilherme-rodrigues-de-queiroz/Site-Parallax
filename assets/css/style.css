@@ -1,0 +1,812 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arimo", sans-serif;
+}
+
+:root {
+    --preto_fosco: #2a2826;
+    --preto: #000;
+    --branco: #fff;
+    --sombra_btn: #00000056;
+    --hover-btn: #252525;
+    --cinza: #6d6d6d;
+    --ceu: #4fbafd;
+    --menu: #00000018;
+    --border_top: #ffffff80;
+    --border_left: #ffffffaf;
+    --close_btn: #ffffff6c;
+    --p_menu: #e2e2e2;
+    --menu_hover: #dfdfdf;
+    --cor_localizacao: #ffffff99;
+    --fundo_localizacao: #00000017;
+}
+
+#preloader {
+    position: absolute;
+    background: var(--preto_fosco) url("/assets/img/preloader.gif") no-repeat center center;
+    background-size: 30%;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+}
+
+::selection {
+    background-color: var(--preto);
+}
+
+.women,
+.montain-2,
+#text,
+.fog-2,
+.montain-3,
+.montain-1,
+.fog-1,
+header {
+    position: absolute;
+}
+
+#text,
+header ul a,
+header ul a button {
+    text-transform: uppercase;
+}
+
+#logo {
+    width: 6.25rem;
+}
+
+header {
+    width: 100%;
+    padding: 1.5rem 0;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+}
+
+header nav {
+    max-width: 87.5rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    align-items: center
+}
+
+header ul a {
+    text-decoration: none;
+    color: var(--branco);
+    padding: 0 1.5rem;
+    font-weight: 300;
+    font-size: .83rem;
+}
+
+header ul li {
+    color: var(--branco);
+}
+
+header ul .monte {
+    letter-spacing: 0.375rem;
+}
+
+header ul a button {
+    border-radius: 1.563rem;
+    padding: 0.813rem 1.875rem 0.813rem 1.875rem;
+    line-height: 0.875rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    height: 2.5rem;
+    border: none;
+    background-color: var(--branco);
+    cursor: pointer;
+    color: var(--preto);
+    text-transform: none;
+    transition: all .25s ease-in-out;
+    filter: drop-shadow(0px 1px 4px var(--sombra_btn));
+}
+
+header ul a button:hover {
+    background-color: var(--hover-btn);
+    color: var(--branco);
+}
+
+#btn {
+    background-color: var(--branco);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.313rem;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+}
+
+#btn span {
+    width: 1.25rem;
+    height: 0.125rem;
+    background-color: var(--cinza);
+    border-radius: 0.625rem;
+}
+
+#btn:hover {
+    background-color: var(--hover-btn);
+}
+
+main {
+    background-color: var(--ceu);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#vinheta {
+    position: absolute;
+    pointer-events: none;
+    z-index: 8;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, .5))
+}
+
+.parallax {
+    pointer-events: none;
+    transition: .45s;
+}
+
+.fog-1 {
+    width: 87.5rem;
+    height: auto;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.montain-1 {
+    width: 53.125rem;
+    height: auto;
+    z-index: 3;
+    bottom: -49%;
+    left: 30%;
+}
+
+.montain-3 {
+    width: 54.375rem;
+    height: auto;
+    z-index: 4;
+    bottom: -45%;
+    left: 70%;
+}
+
+.montain-2 {
+    width: 71.875rem;
+    height: auto;
+    z-index: 5;
+    bottom: 0;
+    left: 1%;
+}
+
+.women {
+    width: 50rem;
+    height: auto;
+    z-index: 7;
+    bottom: -40%;
+    left: 44%;
+}
+
+.menu-options {
+    z-index: 999999;
+    position: absolute;
+    background-color: var(--menu);
+    backdrop-filter: blur(10px);
+    top: 1.25rem;
+    left: -15.625rem;
+    width: 15.625rem;
+    height: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4%;
+    border-top: 1px solid var(--border_top);
+    border-left: 1px solid var(--border_left);
+    border-right: 1px solid var(--branco);
+    border-bottom: 1px solid var(--branco);
+    padding: 1.875rem;
+    gap: 0.625rem;
+    transition: all .25s ease-in-out;
+}
+
+.menu-options.active {
+    display: flex;
+    left: 1.25rem;
+    transition: all .25s ease-in-out;
+}
+
+.menu-options .button-x {
+    margin-top: -1.25rem;
+    margin-right: -1.875rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-options .button-x button {
+    background-color: transparent;
+    border: 0;
+    font-weight: 500;
+    font-size: 0.938rem;
+    color: var(--close_btn);
+    cursor: pointer;
+}
+
+.menu-options .line {
+    background-color: transparent;
+    border-bottom: 1px solid var(--branco);
+    width: 90%;
+    height: 0.063rem;
+    margin-bottom: 1.25rem;
+}
+
+.menu-options p {
+    margin-bottom: 0.625rem;
+    color: var(--p_menu);
+    font-size: 1.125rem;
+    pointer-events: none;
+}
+
+.menu-options .opc {
+    width: 11.25rem;
+    height: 1.375rem;
+}
+
+.menu-options li a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.063rem;
+}
+
+.menu-options span {
+    margin-right: 0.938rem;
+}
+
+.menu-options span img {
+    width: 1.125rem;
+}
+
+.menu-options li a:hover {
+    color: var(--menu_hover);
+}
+
+.localizacao {
+    position: absolute;
+    bottom: 6%;
+    left: 3%;
+    z-index: 10;
+}
+
+.localizacao svg {
+    height: 1.375rem;
+    float: left;
+    margin-right: 0.625rem;
+    transform: translate(0, -0.125rem);
+    -webkit-animation: location-rotate 2s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation: location-rotate 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes location-rotate {
+    from {
+        transform: rotate(0deg) translate(0, 0px);
+    }
+
+    to {
+        transform: rotate(360deg) translate(0, 0px);
+    }
+}
+
+.localizacao span {
+    line-height: 1.375rem;
+    float: left;
+    color: var(--cor_localizacao);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+}
+
+@keyframes spinz {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 2560px) {
+    .montain-1 {
+        width: 90.125rem;
+        bottom: -50%;
+        left: 20%;
+    }
+
+    .montain-2 {
+        width: 132.875rem;
+        bottom: -10%;
+        left: 5%;
+    }
+
+    .montain-3 {
+        width: 87.375rem;
+        bottom: -45%;
+        left: 80%;
+    }
+
+    .women {
+        width: 70rem;
+        bottom: -34%;
+        left: 42%;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .montain-1 {
+        width: 80.125rem;
+        bottom: -48%;
+        left: 30%;
+    }
+
+    .montain-2 {
+        width: 120.875rem;
+        bottom: -6%;
+        left: -7%;
+    }
+
+    .montain-3 {
+        width: 82.375rem;
+        bottom: -45%;
+        left: 70%;
+    }
+
+    .women {
+        width: 60rem;
+        bottom: -30%;
+        left: 42%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .montain-1 {
+        width: 60.125rem;
+        bottom: -48%;
+        left: 30%;
+    }
+
+    .montain-2 {
+        width: 90.875rem;
+        bottom: -6%;
+        left: -7%;
+    }
+
+    .montain-3 {
+        width: 62.375rem;
+        bottom: -45%;
+        left: 70%;
+    }
+
+    .women {
+        width: 50rem;
+        bottom: -32%;
+        left: 42%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .montain-1 {
+        width: 53.125rem;
+        bottom: -49%;
+        left: 30%;
+    }
+
+    .montain-3 {
+        width: 54.375rem;
+        bottom: -45%;
+        left: 70%;
+    }
+
+    .montain-2 {
+        width: 71.875rem;
+        bottom: 0;
+        left: 1%;
+    }
+
+    .women {
+        width: 50rem;
+        bottom: -40%;
+        left: 44%;
+    }
+}
+
+@media screen and (max-width: 1114px) {
+    .montain-1 {
+        width: 50.125rem;
+        bottom: -48%;
+        left: 30%;
+    }
+
+    .montain-2 {
+        width: 69.875rem;
+        bottom: -6%;
+        left: -7%;
+    }
+
+    .montain-3 {
+        width: 52.375rem;
+        bottom: -45%;
+        left: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .montain-1 {
+        width: 43rem;
+        bottom: -48%;
+        left: 40%;
+    }
+
+    .montain-2 {
+        width: 64.875rem;
+        bottom: -6%;
+        left: -29%;
+    }
+
+    .montain-3 {
+        width: 45rem;
+        bottom: -45%;
+        left: 60%;
+    }
+
+    .women {
+        width: 38rem;
+        bottom: -35%;
+        left: 36%;
+    }
+
+    #preloader {
+        background-size: 50%;
+    }
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+    .montain-1 {
+        width: 30rem;
+        bottom: -50%;
+        left: 25%;
+    }
+
+    .montain-2 {
+        width: 35.875rem;
+        bottom: 0;
+        left: 12%;
+    }
+
+    .montain-3 {
+        width: 35rem;
+        bottom: -60%;
+        left: 80%;
+    }
+
+    .women {
+        width: 20rem;
+        bottom: -28%;
+        left: 44%;
+    }
+
+    .menu-options {
+        z-index: 999999;
+        position: absolute;
+        background-color: var(--menu);
+        backdrop-filter: blur(10px);
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        gap: 1.5rem;
+    }
+
+    .menu-options.active {
+        top: 0;
+        left: 0;
+    }
+
+    .menu-options p {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+
+    .menu-options .opc {
+        width: 50rem;
+        height: 1.7rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    #btn-close {
+        font-size: 1.4rem;
+    }
+
+    .localizacao {
+        position: fixed;
+        bottom: 4%;
+        left: 0;
+        right: 0;
+        border-radius: 15px;
+        justify-content: center;
+        display: flex;
+    }
+
+    .localizacao svg {
+        margin-left: 0.3rem;
+    }
+}
+
+@media (max-width: 880px) and (orientation: landscape) {
+    .montain-1 {
+        width: 30rem;
+        bottom: -64%;
+        left: 25%;
+    }
+
+    .montain-2 {
+        width: 35.875rem;
+        bottom: -8%;
+        left: 12%;
+    }
+
+    .montain-3 {
+        width: 35rem;
+        bottom: -69%;
+        left: 80%;
+    }
+
+    .women {
+        width: 20rem;
+        bottom: -34%;
+        left: 44%;
+    }
+
+    .menu-options {
+        gap: 1.1rem;
+    }
+}
+
+@media (max-width: 568px) and (orientation: landscape) {
+    .montain-1 {
+        width: 30rem;
+        bottom: -68%;
+        left: 25%;
+    }
+
+    .montain-2 {
+        width: 35.875rem;
+        bottom: -5%;
+        left: 12%;
+    }
+
+    .montain-3 {
+        width: 35rem;
+        bottom: -70%;
+        left: 80%;
+    }
+
+    .women {
+        width: 20rem;
+        bottom: -38%;
+        left: 44%;
+    }
+
+    nav ul button {
+        display: none;
+    }
+
+    .menu-options {
+        gap: 1.1rem;
+    }
+}
+
+@media (max-width: 430px) {
+    html {
+        position: fixed;
+    }
+
+    .parallax,
+    #vinheta {
+        position: fixed;
+    }
+
+    .montain-1 {
+        width: 43rem;
+        bottom: -10%;
+        left: 60%;
+    }
+
+    .montain-2 {
+        width: 80.875rem;
+        bottom: 0%;
+        left: -105%;
+    }
+
+    .montain-3 {
+        width: 45rem;
+        bottom: -10%;
+        left: 50%;
+    }
+
+    .women {
+        width: 38rem;
+        bottom: -30%;
+        left: 47%;
+    }
+
+    .monte {
+        font-size: 0.9rem;
+        margin-left: 20px;
+    }
+
+    nav ul button {
+        display: none;
+    }
+
+    .menu-options {
+        z-index: 999999;
+        position: absolute;
+        background-color: var(--menu);
+        backdrop-filter: blur(10px);
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        gap: 1.5rem;
+    }
+
+    .menu-options.active {
+        top: 0;
+        left: 0;
+    }
+
+    .menu-options p {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+
+    .menu-options .opc {
+        width: 20rem;
+        height: 1.7rem;
+    }
+
+    #btn-close {
+        font-size: 1.4rem;
+    }
+
+    .localizacao {
+        position: fixed;
+        bottom: 4%;
+        left: 0;
+        right: 0;
+        border-radius: 15px;
+        justify-content: center;
+        display: flex;
+        background-color: var(--fundo_localizacao);
+        backdrop-filter: blur(2px);
+    }
+}
+
+@media (max-width: 390px) {
+    .localizacao {
+        left: 22%;
+        right: 22%;
+    }
+}
+
+@media (max-width: 375px) {
+    .montain-1 {
+        width: 43rem;
+        bottom: -30%;
+        left: 60%;
+    }
+
+    .montain-2 {
+        width: 60.875rem;
+        bottom: -2%;
+        left: -90%;
+    }
+
+    .montain-3 {
+        width: 45rem;
+        bottom: -38%;
+        left: 50%;
+    }
+
+    .women {
+        width: 38rem;
+        bottom: -32%;
+        left: 47%;
+    }
+}
+
+@media (max-width: 320px) {
+    .montain-1 {
+        width: 33rem;
+        bottom: -30%;
+        left: 60%;
+    }
+
+    .montain-2 {
+        width: 50.875rem;
+        bottom: -2%;
+        left: -90%;
+    }
+
+    .montain-3 {
+        width: 34rem;
+        bottom: -38%;
+        left: 50%;
+    }
+
+    .women {
+        width: 35rem;
+        bottom: -39%;
+        left: 47%;
+    }
+}
