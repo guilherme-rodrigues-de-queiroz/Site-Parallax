@@ -1,5 +1,5 @@
 # Parallax Website
-O site foi feito utilizando html5, css3 e javascript vanilla.
+O site foi feito utilizando HTML5, CSS3 e JavaScript Vanilla.
 
 ## Ferramentas utilizadas para desenvolvimento do projeto
 <div style="display: flex; flex-direction: column; margin-bottom: 1.2rem;"><p style="display: flex;"><img src="https://static-00.iconduck.com/assets.00/figma-icon-2048x2048-lvgft610.png" style="width: 20px; height: 20px; margin-right: 0.5rem;"><a href="https://www.figma.com/pt-br/" title="Figma" style="color: #0df; cursor: pointer; font-weigth: bold;">Figma</a>: para design e prototipação.</p></div>
